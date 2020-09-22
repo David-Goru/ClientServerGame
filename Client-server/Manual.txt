@@ -1,0 +1,18 @@
+NOMBRE DEL JUEGO: PAREJAS
+CREADOR: DAVID GÓMEZ RUIZ
+
+Para iniciar el servidor hace falta introducir el número de puerto (por ejemplo, java servidor 5000). Una vez inicializado, el servidor esperará hasta que se hayan conectado dos clientes.
+
+Para iniciar un cliente, también hace falta utilizar un puerto. Se conectará a la ip local (localhost) por defecto. Ejemplo: java cliente 5000.
+
+Una vez conectados los dos clientes, se le dará turno al cliente 0 (el primer jugador recibe el cliente 0 para manejar más fácilmente los datos, pues he usado arrays para almacenar tanto tableros como writers y readers).
+
+Para ofrecer una jugada hay que escribir en primer lugar la primera posición, luego un espacio, guión, punto, coma o lo que se desee y a continuación la otra posición. Las posiciones van de 0 a 3. Por ejemplo:
+1,1; 0.3; 2 1; etc...
+
+Si se introducen posiciones fuera del rango permitido (0-3), no son números o no se ha introducido el número de parámetros correcto se reinicia el turno. Si se repiten ambas posiciones se da por fallado el turno (por ejemplo: jugada 1 posición 1-1, jugada 2 posición 1-1).
+
+Al introducir ambas posiciones, si el jugador ha acertado se muestra por pantalla que ha acertado, al segundo se borra la pantalla y aparece su tablero con el nuevo acierto destapado y se le vuelve a dar turno. Al jugador que no está jugando se le muestra por pantalla que el turno es de nuevo para el jugador anterior.
+Si se falla, aparece que ha fallado y al segundo se borra la pantalla y se muestran los tableros de ambos jugadores y se le da turno al otro jugador, al cual se le actualiza los datos del tablero del primer jugador.
+
+Una vez completado todo el tablero por parte de un jugador, se le da por ganada la partida y se le muestra a ambos jugadores quién ha ganado.
